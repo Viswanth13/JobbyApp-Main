@@ -1,0 +1,51 @@
+.profile-job-filters {
+  background-color: #000000;
+  padding: 20px;
+}
+.jobs-total-container {
+  display: flex;
+}
+.jobs-container {
+  width: 60%;
+}
+.companyLogo {
+  height: 70px;
+  width: 70px;
+}
+.job-container {
+  padding: 10px;
+  background-color: #272727;
+  color: #f1f5f9;
+  margin: 10px;
+  border-radius: 10px;
+}
+.logo-title-container {
+  display: flex;
+}
+.location-package-container {
+  display: flex;
+  justify-content: space-between;
+}
+.location-employment-container {
+  display: flex;
+}
+.profile-job-filters {
+  color: #f1f5f9;
+}
+.profile-success-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 8px;
+}
+.profile-image {
+  height: 40px;
+  width: 40px;
+}
+.profile-heading,
+.profile-bio {
+  color: #4f46e5;
+}
+.search-element {
+  width: 150px;
+  padding: 5px;
+}
