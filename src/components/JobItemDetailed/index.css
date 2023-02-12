@@ -1,0 +1,96 @@
+.detailed-bg-container {
+  background-color: black;
+  padding: 50px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.non-detail-view-container {
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 15px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.each-skill-container {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.skill-image {
+  margin-right: 20px;
+}
+
+.life-at-company {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bottom-section {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.similar-job-con {
+  width: 30%;
+}
+
+.sim-jobs-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .skills-container {
+    justify-content: space-around;
+  }
+
+  .detailed-bg-container {
+    padding: 20px;
+  }
+
+  .skill-image {
+    width: 30%;
+  }
+
+  .life-at-company {
+    flex-direction: column;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .sim-jobs-items-container {
+    flex-direction: column;
+  }
+
+  .similar-job-con {
+    width: 100%;
+  }
+}

@@ -2,75 +2,78 @@ import {Component} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import {AiFillHome} from 'react-icons/ai'
-import {GiSuitcase} from 'react-icons/gi'
-
+import {BsFillBriefcaseFill} from 'react-icons/bs'
+import {HiOutlineLogout} from 'react-icons/hi'
 import './index.css'
 
 class Header extends Component {
-  onClickLogout = () => {
-    Cookies.remove('jwt_token')
+  logoutClicked = () => {
     const {history} = this.props
+    Cookies.remove('jwt_token')
     history.replace('/login')
   }
 
   render() {
     return (
-      <nav className="nav-header">
-        <div className="nav-content">
+      <>
+        <div className="navbar-container">
           <Link to="/">
             <img
-              className="website-header-logo"
+              className="header-website-logo"
               src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
               alt="website logo"
             />
           </Link>
-          <ul className="nav-menu">
-            <Link to="/" className="nav-link">
-              <li>Home</li>
+          <div className="nav-symbols-container">
+            <Link to="/" className="link-decoration">
+              <p>Home</p>
             </Link>
-            <Link to="/jobs" className="nav-link">
-              <li>Jobs</li>
+            <Link to="/jobs" className="link-decoration">
+              <p>Jobs</p>
             </Link>
 
             <button
               type="button"
-              className="nav-link,logout-desktop-btn"
-              onClick={this.onClickLogout}
+              className="logout-button"
+              onClick={this.logoutClicked}
             >
               Logout
             </button>
-          </ul>
+          </div>
         </div>
-        <div className="nav-menu-mobile">
-          <ul className="nav-menu-list-mobile">
-            <Link to="/">
-              <li className="nav-menu-item-mobile">
-                <AiFillHome className="home-icon" />
-              </li>
-            </Link>
-            <Link to="/jobs">
-              <li className="nav-menu-item-mobile">
-                <GiSuitcase className="jobs-icon" />
-              </li>
-            </Link>
+
+        <div className="mobile-nav-bar">
+          <Link to="/">
+            <img
+              className="header-website-logo"
+              src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+              alt="website logo"
+            />
+          </Link>
+          <ul type="none" className="nav-symbols-container">
+            <li>
+              <Link to="/" className="link-decoration">
+                <AiFillHome className="nav-symbols" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/jobs" className="link-decoration">
+                <BsFillBriefcaseFill className="nav-symbols" />
+              </Link>
+            </li>
             <li>
               <button
                 type="button"
-                className="logout-mobile-btn"
-                onClick={this.onClickLogout}
+                className="logout-icon"
+                onClick={this.logoutClicked}
               >
-                <img
-                  src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
-                  alt="logout icon"
-                  className="logout-icon"
-                />
+                <HiOutlineLogout />
               </button>
             </li>
           </ul>
         </div>
-      </nav>
+      </>
     )
   }
 }
-
 export default withRouter(Header)

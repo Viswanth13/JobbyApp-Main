@@ -1,51 +1,114 @@
-.profile-job-filters {
+.total-container {
   background-color: #000000;
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #ffffff;
+  padding-left: 50px;
+  padding-right: 50px;
   padding: 20px;
 }
-.jobs-total-container {
+
+.list-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.search-container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 320px;
+  border: 1px solid #64748b;
+  border-radius: 3px;
+  margin-bottom: 25px;
 }
-.jobs-container {
-  width: 60%;
-}
-.companyLogo {
-  height: 70px;
-  width: 70px;
-}
-.job-container {
+
+.search-input {
   padding: 10px;
-  background-color: #272727;
-  color: #f1f5f9;
-  margin: 10px;
-  border-radius: 10px;
+  border: 0px;
+  background-color: transparent;
+  border-radius: 3px;
+  color: #ffffff;
+  width: 300px;
+  outline: none;
 }
-.logo-title-container {
-  display: flex;
+
+.search-button {
+  height: 100%;
+  padding: 10px;
+  background-color: #1e1d1c;
+  color: #ffffff;
+  cursor: pointer;
 }
-.location-package-container {
+
+.jobs-container {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.not-if-list {
+  text-align: center;
+}
+
+.retry {
+  padding: 10px;
+  border: 0px;
+  background-color: #6366f1;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.link-container {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.mobile-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 320px;
+  border: 1px solid #64748b;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  align-self: center;
+  width: 90%;
 }
-.location-employment-container {
-  display: flex;
+
+@media screen and (max-width: 767px) {
+  .total-container {
+    flex-direction: column;
+  }
+
+  .search-container {
+    display: none;
+  }
 }
-.profile-job-filters {
-  color: #f1f5f9;
+
+@media screen and (min-width: 768px) {
+  .mobile-search {
+    display: none;
+  }
 }
-.profile-success-container {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
-  background-size: cover;
-  padding: 8px;
-}
-.profile-image {
-  height: 40px;
-  width: 40px;
-}
-.profile-heading,
-.profile-bio {
-  color: #4f46e5;
-}
-.search-element {
-  width: 150px;
-  padding: 5px;
+
+@media screen and (max-width: 767px) {
+  .no-jobs {
+    width: 80%;
+  }
+
+  .not-if-list {
+    width: 100%;
+  }
 }

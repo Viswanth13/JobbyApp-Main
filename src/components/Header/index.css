@@ -1,48 +1,91 @@
-.nav-header {
-  padding: 10px;
-  background-color: #202020;
-}
-.nav-content {
+.navbar-container {
+  padding: 23px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  background-color: #272625;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-.nav-menu {
+
+.horizontal {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  border: 1px solid #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  color: #ffffff;
+  font-weight: 500;
 }
-.nav-link {
-  list-style-type: none;
-  margin: 10px;
-  color: #f8fafc;
-  font-weight: bold;
-  border: 1px solid #fff;
-}
-.nav-menu-mobile {
-  display: none;
-}
-.website-header-logo {
-  height: 60px;
-  width: 120px;
-}
-.logout-desktop-btn {
-  color: #f1f5f9;
-  background-color: #4f46e5;
-  padding: 5px;
 
-  border-radius: 10px;
-  border: none;
+.header-website-logo {
+  height: 40px;
+}
+.logout-button {
+  padding: 10px;
+  border: 0px;
+  background-color: #6366f1;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 4px;
+  width: 80px;
   cursor: pointer;
-  margin-top: 20px;
-  font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-menu-mobile {
-    display: flex;
+p {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link-decoration {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.mobile-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #272625;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logout-icon {
+  background-color: transparent;
+  border: 0px;
+  color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.nav-symbols {
+  font-size: 25px;
+}
+
+.nav-symbols-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+@media (max-width: 767px) {
+  .navbar-container {
+    display: none;
   }
-  .nav-content {
+
+  .nav-symbols-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-bar {
     display: none;
   }
 }
